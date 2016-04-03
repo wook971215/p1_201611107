@@ -1,0 +1,26 @@
+@startuml
+
+title Let's start Rock Scissors Paper Game!
+
+
+start
+:Define Rock = 1 Scissors = 2 Paper =4;
+:Define result = Number(UserA) / Number(UserB);
+repeat
+:User A : choose Rock or Scissors or Paper
+User B : choose Rock or Scissors or Paper;
+if (result=0.25)
+:"B win";
+elseif (result=0.5)
+:"A win";
+elseif (result=1.0)
+:"no winner";
+elseif (result=2.0)
+:"B win";
+elseif (result=4.0)
+:"A win";
+endif
+:print Who is the winner;
+repeat while(Do you want play the again? yes or no)
+stop
+@enduml
