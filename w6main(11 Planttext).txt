@@ -1,0 +1,10 @@
+@startuml
+
+start
+:get user input year;
+if(year%4==0 and year%100==0 or year%400==0) then (yes)
+     :leap year;
+else (no)
+     :no leap year;
+endif
+stop
