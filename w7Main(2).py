@@ -1,9 +1,8 @@
+import turtle
+wn=turtle.Screen()
+t1=turtle.Turtle()
+
 def drawSquare(pos1,pos2,size):
-    import turtle
-    wn=turtle.Screen()
-    t1=turtle.Turtle()
-    t1.home()
-    t1.clear()
     tracks=list()
     t1.penup()
     t1.goto(pos1,pos2)
