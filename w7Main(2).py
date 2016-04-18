@@ -13,13 +13,13 @@ def drawSquare(pos1,pos2,size):
         t1.right(90)    
         tracks.append(t1.pos())
     return tracks
-    print tracks
     
-    wn.exitonclick()
-
 
 def main():
-    drawSquare(0,0,100)
+    mytracks=drawSquare(0,0,90)
+    print mytracks
+    wn.exitonclick()
+
 
 if __name__=="__main__":
     main()
