@@ -1,4 +1,4 @@
-﻿def drawSquare(pos1,pos2,size):
+def drawSquare(pos1,pos2,size):
     import turtle
     wn=turtle.Screen()
     t1=turtle.Turtle()
