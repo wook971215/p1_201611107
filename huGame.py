@@ -276,7 +276,7 @@ def drawShapeInOnce():
 	
 		t1.shape("turtle")
 
-		wn.bgpic("bg.gif")
+		wn.bgcolor("Lightpink")
 
 		print "Level 1"
 	
