@@ -1,0 +1,21 @@
+@startuml
+
+start
+
+:sum=0;
+:X=0;
+
+repeat
+:X = X+1;
+    if(X is 3 or 5's multi?) then (yes)
+        :sum = sum + X;
+
+
+    else (no)
+
+while (X>1000?) is (yes)
+
+:print sum;
+
+
+stop
