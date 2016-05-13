@@ -7,47 +7,8 @@
 ('subject', 13.5, 29.7, 11.1, 2.4),
 ('school', 13.7, 37.6, 4.1, 1.2)]
 
-def data():
-    verygood=list()
-    for i in range(0,len(alldata)):
-        verygood.append(alldata[i][1])
-    good=list()
-    for i in range(0,len(alldata)):
-        good.append(alldata[i][2])
-    bad=list()
-    for i in range(0,len(alldata)):
-        bad.append(alldata[i][3])
-    verybad=list()
-    for i in range(0,len(alldata)):
-        verybad.append(alldata[i][4])
-    sumvg=0
-    for i in range(0,len(alldata)):
-        sumvg = sumvg + verygood[i]
-    sumg = 0
-    for i in range(0,len(alldata)):
-        sumg = sumg + good[i]
-    goodsum = 0
-    goodsum = sumvg + sumg
-    print "Very good & good sum is ", goodsum
-    average = 0
-    gaverage = goodsum / len(alldata)
-    print "Very good & good average is ", gaverage
 
-    sumb=0
-    for i in range(0,len(alldata)):
-        sumb = sumb + bad[i]
-    sumvb = 0
-    for i in range(0,len(alldata)):
-        sumvb = sumvb + verybad[i]
-    badsum = 0
-    badsum = sumb + sumvb
-    print "Bad & Very bad sum is ", badsum
-
-    baverage = 0
-    baverage = badsum / len(alldata)
-    print "Bad & Very bad average is ", baverage
-
-def president():
+def presi():
     Washington = list()
     Washington = ("AMONG the vicissitudes incident to life no event could have filled me with greater anxieties than that of which the notification was transmitted by your order, and received on the 14th day of the present month.",
                   "On the one hand, I was summoned by my country, whose voice I can never hear but with veneration and love, from a retreat which I had chosen with the fondest predilection, and, in my flattering hopes, with an immutable decision, as the asylum of my declining years - a retreat which was rendered every day more necessary as well as more dear to me by the addition of habit to inclination, and of frequent interruptions in my health to the gradual waste committed on it by time.",
@@ -92,10 +53,51 @@ def president():
         if db.values()[v]>=10:
             resultb = db.keys()[v], db.values()[v]
     print "Washington most used word is ", resultw,"Bush most used word is ", resultb
+    
+def data():
+    verygood=list()
+    for i in range(0,len(alldata)):
+        verygood.append(alldata[i][1])
+    good=list()
+    for i in range(0,len(alldata)):
+        good.append(alldata[i][2])
+    bad=list()
+    for i in range(0,len(alldata)):
+        bad.append(alldata[i][3])
+    verybad=list()
+    for i in range(0,len(alldata)):
+        verybad.append(alldata[i][4])
+    sumvg=0
+    for i in range(0,len(alldata)):
+        sumvg = sumvg + verygood[i]
+    sumg = 0
+    for i in range(0,len(alldata)):
+        sumg = sumg + good[i]
+    goodsum = 0
+    goodsum = sumvg + sumg
+    print "Very good & good sum is ", goodsum
+    average = 0
+    gaverage = goodsum / len(alldata)
+    print "Very good & good average is ", gaverage
+
+    sumb=0
+    for i in range(0,len(alldata)):
+        sumb = sumb + bad[i]
+    sumvb = 0
+    for i in range(0,len(alldata)):
+        sumvb = sumvb + verybad[i]
+    badsum = 0
+    badsum = sumb + sumvb
+    print "Bad & Very bad sum is ", badsum
+
+    baverage = 0
+    baverage = badsum / len(alldata)
+    print "Bad & Very bad average is ", baverage
+
 
 def lab10():
+    presi()
     data()
-    president()
 def main():
     lab10()
     raw_input()
