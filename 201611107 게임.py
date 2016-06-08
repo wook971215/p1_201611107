@@ -338,36 +338,35 @@ def stageFour():
     t2.setpos(-60,60)
     t2.pendown()
     t2.setheading(0)
-
     def k1():
         t2.forward(120)
-
 	(x,y)=t2.pos()
+	global point
 	if -80<x<-40 and 40<y<80:
-		point=point+10	
-		print "Your point is %d !" % point
+			point=point+10	
+			print "Your point is %d !" % point
 	if -140<x<100 and -63<y<-23:
-		point=point+10
-		print "Your point is %d !" % point
+			point=point+10
+			print "Your point is %d !" % point
 	if -80<x<-40 and -167<y<-127:
-		point=point+10
-		print "Your point is %d !" % point
+			point=point+10
+			print "Your point is %d !" % point
 	if 40<x<80 and 40<y<80:
-		point=point+10
-		print "Your point is %d !" % point
+			point=point+10
+			print "Your point is %d !" % point
 	if 100<x<140 and -63<y<-23:
-		point=point+10
-		print "Your point is %d !" % point
+			point=point+10
+			print "Your point is %d !" % point
 	if 40<x<80 and -167<y<-127:
-		point=point+10
-		print "Your point is %d !" % point
+			point=point+10
+			print "Your point is %d !" % point
 	if point==70:
-		print"-----------------------------------"
-		print"You Win, End game~"
-	if point>70:
-		print"-----------------------------------"
-		print"Game Over! Press Q"
-    def k2():	
+			print"-----------------------------------"
+			print"You Win, End game~"
+			Score()
+
+
+    def k2():
         t2.left(60) 
     def k3():
         t2.right(60)
@@ -443,13 +442,19 @@ def stageFive():
 def Score():
     global point
     played=open('save.txt', 'a')
-    if point==170:
+    if point==70:
         name = raw_input("Put in your name: ")
         msg='played {0}'.format(name + '\t' + time.strftime('%Y.%m.%d , %H:%M:%S'))
-        print("End Game"+'\n'+'Score' + '\t'+ str(result) +'\t' + msg)
-        played.write('\n' + 'Score' + '\t'+ str(result) +'\t' + msg)
+        print("End Game"+'\n'+'Score' + '\t'+ str(point) +'\t' + msg)
+        played.write('\n' + 'Score' + '\t'+ str(point) +'\t' + msg)
         played.close()
         print("Click Screen")
+
+def k10():
+	wn.bye()
+
+wn.onkey(k10,"q")
+wn.listen()
     
     
 def drawShapeInOnce():
