@@ -342,7 +342,7 @@ def stageFour():
     def k1():
         t2.forward(120)
 
-	(x,y)=t1.pos()
+	(x,y)=t2.pos()
 	if -80<x<-40 and 40<y<80:
 		point=point+10	
 		print "Your point is %d !" % point
